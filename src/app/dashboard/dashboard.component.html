@@ -1,0 +1,20 @@
+
+<nav>
+    <div class="nav-wrapper">
+      <a href="/sign-in" class="brand-logo center">E-Square</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li *ngIf='type==null'><a href="/register-student">Enroll</a></li>
+        <li *ngIf="type=='teacher'"><a routerLink="students">Student List</a></li>
+        <li *ngIf='type=="student"'><a routerLink="student-portal">My Class</a></li>
+        <li *ngIf='type!="studnet"'><a routerLink="register-teacher">Become a Teacher</a></li>
+        <li><a routerLink="#">About</a></li>
+        <li><a routerLink="payment">Payment Info</a></li>
+        <li><a (click)="logout()">LogOut</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+<router-outlet></router-outlet>
+
+</div>
+

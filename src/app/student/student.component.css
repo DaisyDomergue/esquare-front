@@ -1,0 +1,4 @@
+
+  .input-field input[type=text]:focus + label {
+    color: rgb(218, 71, 71);
+  }

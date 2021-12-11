@@ -1,0 +1,36 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { StudentComponent } from './student/student.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SigninComponent } from './signin/signin.component';
+import { StudentPortalComponent } from './student-portal/student-portal.component';
+import { PaymentComponent } from './payment/payment.component';
+import { TeacherRegisterComponent } from './teacher-register/teacher-register.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    StudentComponent,
+    StudentListComponent,
+    DashboardComponent,
+    SigninComponent,
+    StudentPortalComponent,
+    PaymentComponent,
+    TeacherRegisterComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

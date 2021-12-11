@@ -1,0 +1,33 @@
+
+<div class="row">
+    <div class="col s6 offset-s3">
+        <div class="card center-align">
+            <form #signinForm="ngForm" (ngSubmit)="onSubmit(signinForm)">
+            <div class="card-content teal-text darken-2">
+                <span class="card-title">Sign-in</span>
+                <div class="row">
+                    <div class="input-field col s9 offset-s1">
+                        <input type="text" (change)="userChanged($event)" name="username" >
+                        <label class="teal-text darken-2">User Name :</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s9 offset-s1">
+                        <input type="password" (change)="passwordChanged($event)" name="password" >
+                        <label class="teal-text darken-2">Password :</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s9 offset-s1">
+                        <input type="submit" class="btn teal darken-3" name="submit" value="Sign-in" />
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card-action">
+            <p>Sign-in to access content or <a href="/register-student">enroll</a> as a student if you are new.</p>
+            </div>
+            </form>
+        </div>
+   </div>
+</div>
