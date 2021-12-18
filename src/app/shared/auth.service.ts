@@ -3,17 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
-  user:any;
-  readonly baseURL ='http://127.0.0.1:3000/student/';
-
-  constructor(private http:HttpClient) { }
-
-  authenticateUser(user)
-  {
-   return this.http.get(this.baseURL,user);
+  constructor() {}
+  public isAuthenticated(): boolean {
+    const usertype=localStorage.getItem("type");
+    return usertype && usertype.length > 0;
   }
 }
