@@ -7,6 +7,7 @@ import { SigninComponent } from './signin/signin.component';
 import { PaymentComponent } from './payment/payment.component';
 import { StudentPortalComponent } from './student-portal/student-portal.component';
 import { TeacherRegisterComponent } from './teacher-register/teacher-register.component';
+import { StudentGuard } from './guards/student.guard';
 const routes: Routes = [
   {
     path:'',component:SigninComponent
@@ -18,7 +19,7 @@ const routes: Routes = [
     path:'payment',component: PaymentComponent
   },
   {
-    path:'student-portal',component: StudentPortalComponent
+    path:'student-portal',canActivate:[StudentGuard],component: StudentPortalComponent
   },
   {
     path:'students',component: StudentListComponent

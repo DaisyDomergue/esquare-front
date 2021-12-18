@@ -38,10 +38,16 @@ export class SigninComponent implements OnInit {
       this.http
         .post('http://localhost:3000/login', body, { headers: headers })
         .subscribe((res) => {
-          if ((res['type'] = 'student')) {
-            this.router.navigate(['student-portal']);
+          console.log(res);
+          if(res['message']=='Invalid username or password')
+          {
+            alert(res['message']);
+          }
+          else if ((res['type'] = 'student')) {
             localStorage.setItem('type', res['type']);
             this.studentService.storeStudent(this.user_name);
+            this.router.navigate(['student-portal']);
+            
           }
         });
     } catch (err) {

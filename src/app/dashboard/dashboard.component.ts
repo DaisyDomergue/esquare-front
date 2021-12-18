@@ -19,7 +19,8 @@ export class DashboardComponent implements OnInit {
   logout(){
     this.currentUsername=null;
     this.type=null;
-    this.router.navigate(['student-portal']);
+    localStorage.setItem("type","");
+    this.router.navigate(['sign-in']);
     
   }
 

@@ -8,9 +8,10 @@
         <li *ngIf='type=="student"'><a routerLink="student-portal">My Class</a></li>
         <li *ngIf='type!="studnet"'><a routerLink="register-teacher">Become a Teacher</a></li>
         <li><a routerLink="#">About</a></li>
-        <li><a routerLink="payment">Payment Info</a></li>
-        <li><a (click)="logout()">LogOut</a></li>
+        <li *ngIf='type=="student"'><a routerLink="payment">Payment Info</a></li>
+        <li><a (click)="logout()">Logout</a></li>
       </ul>
+      
     </div>
   </nav>
   <div class="container">
