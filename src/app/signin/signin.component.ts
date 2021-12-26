@@ -37,9 +37,9 @@ export class SigninComponent implements OnInit {
       });
       const headers = { 'content-type': 'application/json' };
       this.http
-        .post('http://192.168.202.55:3000/login', body, { headers: headers })
+        .post('http://localhost:3000/login', body, { headers: headers })
         .subscribe((res) => {
-          alert(res['type']);
+        
           if(res['message']=='Invalid username or password')
           {
             alert(res['message']);

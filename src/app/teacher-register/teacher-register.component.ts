@@ -38,6 +38,7 @@ export class TeacherRegisterComponent implements OnInit {
   onSubmit(form:NgForm){
     this.teacherService.postTeacher(form.value).subscribe((res)=>
     {
+      console.log(res);
       M.toast({html:'Registered successfuly.', classes:'rounded'});
       this.router.navigate(['sign-in']);
     })

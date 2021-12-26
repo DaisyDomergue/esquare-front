@@ -40,11 +40,18 @@ export class StudentComponent implements OnInit {
   onSubmit(form : NgForm)
   {
     
-    console.log(form.value);
+    //console.log(form.value);
     this.studentService.postStudent(form.value).subscribe((res)=>{
       console.log(res);
-      M.toast({html:'Registered successfuly.', classes:'rounded'});
-      this.router.navigate(['payment']);
+      if(res['message']=="Student Created Successfully")
+      {
+        M.toast({html:'Registered successfuly.', classes:'rounded'});
+        this.router.navigate(['payment']);
+      }
+      else{
+        M.toast({html:'Registered successfuly.', classes:'rounded'});
+      }
+     
     });
   }
 
