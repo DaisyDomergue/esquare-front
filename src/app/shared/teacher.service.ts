@@ -11,10 +11,12 @@ export class TeacherService {
   teachers:Teacher[];
 
   readonly baseURL='http://127.0.0.1:3000/teacher/';
+  readonly registerURL='http://127.0.0.1:3000/register/teacher';
+
   constructor(private http:HttpClient) { }
 
   postTeacher(std : Teacher){
-    return this.http.post(this.baseURL,std);
+    return this.http.post(this.registerURL,std);
   }
   getTeacherList(){
     return this.http.get(this.baseURL);

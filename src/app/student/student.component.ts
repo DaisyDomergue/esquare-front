@@ -42,6 +42,7 @@ export class StudentComponent implements OnInit {
     
     console.log(form.value);
     this.studentService.postStudent(form.value).subscribe((res)=>{
+      console.log(res);
       M.toast({html:'Registered successfuly.', classes:'rounded'});
       this.router.navigate(['payment']);
     });

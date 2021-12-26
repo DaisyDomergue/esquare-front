@@ -23,7 +23,6 @@ export class TeacherRegisterComponent implements OnInit {
               level: "",
               email: "",
               phone_no:"",
-              cv_file_path:"",
               user_name:"",
               user_password:"",
             }

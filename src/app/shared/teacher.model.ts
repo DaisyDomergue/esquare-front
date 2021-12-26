@@ -6,7 +6,6 @@ export class Teacher {
     level: String;
     email: String;
     phone_no:String;
-    cv_file_path:String;
     user_name:String;
     user_password:String;
 }
