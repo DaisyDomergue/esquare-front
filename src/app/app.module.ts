@@ -12,6 +12,7 @@ import { SigninComponent } from './signin/signin.component';
 import { StudentPortalComponent } from './student-portal/student-portal.component';
 import { PaymentComponent } from './payment/payment.component';
 import { TeacherRegisterComponent } from './teacher-register/teacher-register.component';
+import { TeacherComponent } from './teacher/teacher.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TeacherRegisterComponent } from './teacher-register/teacher-register.co
     SigninComponent,
     StudentPortalComponent,
     PaymentComponent,
-    TeacherRegisterComponent
+    TeacherRegisterComponent,
+    TeacherComponent
   ],
   imports: [
     BrowserModule,

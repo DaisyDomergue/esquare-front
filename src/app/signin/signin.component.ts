@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { StudentService } from '../shared/student.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { TeacherService } from '../shared/teacher.service';
 
 @Component({
   selector: 'app-signin',
@@ -12,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class SigninComponent implements OnInit {
   constructor(
     private studentService: StudentService,
+    private teacherService: TeacherService,
     private router: Router,
     private http: HttpClient
   ) {}
@@ -35,7 +37,7 @@ export class SigninComponent implements OnInit {
       });
       const headers = { 'content-type': 'application/json' };
       this.http
-        .post('http://127.0.0.1:3000/login', body, { headers: headers })
+        .post('http://192.168.202.55:3000/login', body, { headers: headers })
         .subscribe((res) => {
           alert(res['type']);
           if(res['message']=='Invalid username or password')
@@ -51,8 +53,8 @@ export class SigninComponent implements OnInit {
           else if((res['type']== 'teacher'))
           {
             localStorage.setItem('type', res['type']);
-            this.studentService.storeStudent(this.user_name);
-            this.router.navigate(['student-portal']);
+            this.teacherService.storeTeacher(this.user_name);
+            this.router.navigate(['teacher-portal']);
           }
         });
     } catch (err) {
