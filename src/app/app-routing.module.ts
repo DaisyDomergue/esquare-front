@@ -32,7 +32,7 @@ const routes: Routes = [
     path:'register-teacher',component:TeacherRegisterComponent
   },
   {
-    path:'teacher-portal',component:TeacherComponent
+    path:'teacher-portal',canActivate:[StudentGuard],component:TeacherComponent
   },
   {
     path:'dashboard',component:DashboardComponent
