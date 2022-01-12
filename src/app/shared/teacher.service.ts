@@ -21,6 +21,10 @@ export class TeacherService {
   getTeacherList(){
     return this.http.get(this.baseURL);
   }
+  getTeacher(){
+    //console.log(this.baseURL+"profile/" + JSON.parse(localStorage.getItem("student")));
+    return this.http.get(this.baseURL+"profile/" + JSON.parse(localStorage.getItem("teacher")));
+  }
   assignTeacher(stdId:String,section:String){
     return this.http.patch(this.baseURL,{teacher_id:stdId,teacher_section:section});
   }
