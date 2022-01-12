@@ -13,20 +13,35 @@ export class StudentListComponent implements OnInit {
   constructor( public studentService:StudentService) { }
   //students: Student[];
   ngOnInit(): void {
-    this.refreshEmployeeList();
+    this.refreshStudentList();
   }
-  refreshEmployeeList()
+
+  refreshStudentList()
   {
     this.studentService.getStudentList().subscribe((res)=>{
-      console.log(res);
+      //console.log(res);
       this.studentService.students=res as Student[];
     });
   }
+  assignSection(studentid:String,section:string)
+  {
+    this.studentService.assignStudent(studentid,section).subscribe((res)=>{
+      console.log(res);
+    })
+  }
+  handleSectionChange(event:any,stdid:String){
+    this.assignSection(stdid,event.target.value);
+  }
   deleteStudent(id:String)
   {
-    this.studentService.deleteStudent(id).subscribe((res)=>{
-      this.refreshEmployeeList();
-    });
+    if(confirm("Are you sure about delete this student"))
+    {
+      this.studentService.deleteStudent(id).subscribe((res)=>{
+        this.refreshStudentList();
+      });
+
+    }
+  
    
   }
   editStudent(id:String)

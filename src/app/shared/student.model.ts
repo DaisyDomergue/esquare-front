@@ -10,4 +10,5 @@ export class Student {
     user_name:String;
     user_password:String;
     parent_email:String;
+    section:String;
 }

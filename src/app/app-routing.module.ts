@@ -9,6 +9,8 @@ import { StudentPortalComponent } from './student-portal/student-portal.componen
 import { TeacherRegisterComponent } from './teacher-register/teacher-register.component';
 import { StudentGuard } from './guards/student.guard';
 import { TeacherComponent } from './teacher/teacher.component';
+import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { RegisterAdminComponent } from './register-admin/register-admin.component';
 const routes: Routes = [
   {
     path:'',component:SigninComponent
@@ -36,6 +38,12 @@ const routes: Routes = [
   },
   {
     path:'dashboard',component:DashboardComponent
+  },
+  {
+    path:'teachers',component:TeacherListComponent
+  },
+  {
+    path:'register-admin',component:RegisterAdminComponent
   }
 ];
 

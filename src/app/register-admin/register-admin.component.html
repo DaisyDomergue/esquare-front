@@ -3,40 +3,31 @@
     <div class="col s11">
         <div class="card">
             <div class="card-content teal-text accent-3">
-                <h4 class="center-align">Teacher Registration</h4>
+                <h4 class="center-align">Admin Registration</h4>
                
               
                 <div class="row">
                     
-                        <form #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm)">
+                        <form #adminForm="ngForm" (ngSubmit)="onSubmit(adminForm)">
                             <div class="col s5" >
-                            <input type="hidden" #_id="ngModel" name="_id" [(ngModel)]="teacherService.selectedTeacher._id" >
+                            <input type="hidden" #_id="ngModel" name="_id" [(ngModel)]="adminService.selectedAdmin._id" >
                       
                         <div class="row">
                             <div class="input-field col s12 ">
-                                <input required type="text" #first_name="ngModel" name="first_name" [(ngModel)]="teacherService.selectedTeacher.first_name" >
+                                <input required type="text" #first_name="ngModel" name="first_name" [(ngModel)]="adminService.selectedAdmin.first_name" >
                                 <label class="teal-text darken-2">First Name :</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="teacherService.selectedTeacher.last_name" >
+                                <input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="adminService.selectedAdmin.last_name" >
                                 <label required class="teal-text darken-2">Last Name :</label>
                             </div>
                         </div>
                        
                         <div class="row">
                             <div class="input-field col s12">
-                                <select required name="level" #level="ngModel" [(ngModel)]="teacherService.selectedTeacher.level">
-                                    <option value="Level 1" disabled selected>Teaching Level</option>
-                                    <option *ngFor="let level of levels" [value]="level.key">{{ level.value }}</option>
-                                </select>
-                                <label class="teal-text darken-2">Teaching Level :</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input required type="text" #parent_email="ngModel" [(ngModel)]="teacherService.selectedTeacher.email" name="email">
+                                <input required type="text" #parent_email="ngModel" [(ngModel)]="adminService.selectedAdmin.email" name="email">
                                 <label class="teal-text darken-2" >Email:</label>
                             </div>
                         </div>
@@ -46,7 +37,7 @@
                     <div class="col s5">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input required type="text" name="phone_no" #phone_no="ngModel" [(ngModel)]="teacherService.selectedTeacher.phone_no">
+                                <input required type="text" name="phone_no" #phone_no="ngModel" [(ngModel)]="adminService.selectedAdmin.phone_no">
                                 <label class="teal-text darken-2">Phone No:</label>
                             </div>
                         </div>
@@ -54,13 +45,13 @@
                        
                         <div class="row">
                             <div class="input-field col s12">
-                                <input required type="text" name="user_name" #user_name="ngModel" [(ngModel)]="teacherService.selectedTeacher.user_name"  >
+                                <input required type="text" name="user_name" #user_name="ngModel" [(ngModel)]="adminService.selectedAdmin.user_name"  >
                                 <label class="teal-text darken-2">User Name:</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input required type="password" name="user_password" #user_password="ngModel" [(ngModel)]="teacherService.selectedTeacher.user_password"  >
+                                <input required type="password" name="user_password" #user_password="ngModel" [(ngModel)]="adminService.selectedAdmin.user_password"  >
                                 <label class="teal-text darken-2">Password:</label>
                             </div>
                         </div>
@@ -73,7 +64,7 @@
                         <div class="row">
                             <div class="col s10"></div>
                             <div class="input-field col s2">
-                               <button type="submit" [disabled]="!studentForm.valid" class="teak darken-3 waves-effect waves-light btn">Submit</button>
+                               <button type="submit" [disabled]="!adminForm.valid" class="teak darken-3 waves-effect waves-light btn">Submit</button>
                             </div>
                         </div>
                     </div>

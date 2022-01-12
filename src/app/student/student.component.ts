@@ -29,14 +29,22 @@ export class StudentComponent implements OnInit {
       user_name:"",
       user_password:"",
       parent_email:"",
+      section:""
     }
    }
   
-  levels = ["Level 1","Level 2","Level 3"];
+  levels = [{key:"pre_1",value:"Preschool - I"},{key:"pre_2",value:"Preschool - II"},{key:"pre_3",value:"Preschool - III"},{key:"spe_1",value:"Special Education Level - I"},{key:"spe_2",value:"Special Education Level - II"},{key:"care_basic",value:"Caregivers Training Basic"},{key:"care_adv",value:"Caregivers Training Advanced"}];
   
   ngOnInit(): void {
   }
-
+  firstnameChange(event:any)
+  {
+    this.studentService.selectedStudent.user_name=event.target.value;
+  }
+  lastnameChange(event:any)
+  {
+    this.studentService.selectedStudent.user_name=this.studentService.selectedStudent.first_name + event.target.value.substring(0,2);
+  }
   onSubmit(form : NgForm)
   {
     

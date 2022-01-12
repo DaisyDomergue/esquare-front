@@ -10,8 +10,8 @@ export class TeacherService {
   selectedTeacher: Teacher;
   teachers:Teacher[];
 
-  readonly baseURL='http://192.168.202.55:3000/teacher/';
-  readonly registerURL='http://192.168.202.55:3000/register/teacher';
+  readonly baseURL='http://127.0.0.1:3000/teacher/';
+  readonly registerURL='http://127.0.0.1:3000/register/teacher';
 
   constructor(private http:HttpClient) { }
 
@@ -20,6 +20,9 @@ export class TeacherService {
   }
   getTeacherList(){
     return this.http.get(this.baseURL);
+  }
+  assignTeacher(stdId:String,section:String){
+    return this.http.patch(this.baseURL,{teacher_id:stdId,teacher_section:section});
   }
   deleteTeacher(id:String)
   {

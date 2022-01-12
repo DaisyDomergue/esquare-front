@@ -25,10 +25,11 @@ export class TeacherRegisterComponent implements OnInit {
               phone_no:"",
               user_name:"",
               user_password:"",
+              section:""
             }
           }
 
-  levels = ["Level 1","Level 2","Level 3"];
+  levels = [{key:"level_1",value:"Level 1"},{key:"level_2",value:"Level 2"},{key:"level_3",value:"Level 3"}];
   
 
   ngOnInit(): void {

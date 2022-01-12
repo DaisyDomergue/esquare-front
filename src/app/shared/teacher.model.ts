@@ -8,4 +8,5 @@ export class Teacher {
     phone_no:String;
     user_name:String;
     user_password:String;
+    section:String;
 }

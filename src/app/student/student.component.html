@@ -14,13 +14,13 @@
                       
                         <div class="row">
                             <div class="input-field col s12 ">
-                                <input required type="text" #first_name="ngModel" name="first_name" [(ngModel)]="studentService.selectedStudent.first_name" >
+                                <input required type="text" (change)="firstnameChange($event)" #first_name="ngModel" name="first_name" [(ngModel)]="studentService.selectedStudent.first_name" >
                                 <label class="teal-text darken-2">First Name :</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="studentService.selectedStudent.last_name" >
+                                <input type="text" name="last_name" (change)="lastnameChange($event)" #last_name="ngModel" [(ngModel)]="studentService.selectedStudent.last_name" >
                                 <label required class="teal-text darken-2">Last Name :</label>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                             <div class="input-field col s12">
                                 <select required name="level" #level="ngModel" [(ngModel)]="studentService.selectedStudent.level">
                                     <option value="Level 1" disabled selected>Education Level</option>
-                                    <option *ngFor="let level of levels">{{ level }}</option>
+                                    <option *ngFor="let level of levels" [value]="level.key">{{ level.value }}</option>
                                 </select>
                                 <label class="teal-text darken-2">Education Level :</label>
                             </div>
@@ -49,19 +49,19 @@
                     </div>
                     <div class="col s1"></div>
                     <div class="col s5">
-                        <div class="row">
+                        <div class="row" *ngIf="this.studentService.selectedStudent.level != 'care_basic' && this.studentService.selectedStudent.level != 'care_adv' ">
                             <div class="input-field col s12">
                                 <input required type="text" name="parent_name" #parent_name="ngModel" [(ngModel)]="studentService.selectedStudent.parent_name">
                                 <label class="teal-text darken-2">Parent Name :</label>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" *ngIf="this.studentService.selectedStudent.level != 'care_basic' && this.studentService.selectedStudent.level != 'care_adv' ">
                             <div class="input-field col s12">
                                 <input required type="text" name="parent_id_no"  #parent_id_no="ngModel" [(ngModel)]="studentService.selectedStudent.parent_id_no"  >
                                 <label class="teal-text darken-2">Parent ID no :</label>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" *ngIf="this.studentService.selectedStudent.level != 'care_basic' && this.studentService.selectedStudent.level != 'care_adv' ">
                             <div class="input-field col s12">
                                 <input required type="text" name="parent_phone_no" #parent_phone_no="ngModel" [(ngModel)]="studentService.selectedStudent.parent_phone_no"  >
                                 <label class="teal-text darken-2">Parent Phone number :</label>
@@ -69,8 +69,8 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input required type="text" name="user_name" #user_name="ngModel" [(ngModel)]="studentService.selectedStudent.user_name"  >
-                                <label class="teal-text darken-2">User Name:</label>
+                                <input readonly placeholder="UserName" required type="text" name="user_name" #user_name="ngModel" [(ngModel)]="studentService.selectedStudent.user_name"  >
+                                <!--<label class="teal-text darken-2">User Name:</label> -->
                             </div>
                         </div>
                         <div class="row">

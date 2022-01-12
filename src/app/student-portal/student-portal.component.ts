@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from '../shared/student.service';
 
 @Component({
   selector: 'app-student-portal',
@@ -7,9 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentPortalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public studentService:StudentService) { 
+    
+  }
+  first_name="";
+  last_name="";
+  level="";
+  section="";
 
   ngOnInit(): void {
+    this.getStudent();
   }
+ 
+  getStudent()
+  {
+    this.studentService.getStudent().subscribe((res) => {
+      console.log(res);
+      this.first_name=res["first_name"];
+      this.last_name=res["last_name"];
+      this.level=res["level"];
+      this.section=res["section"];
+
+      console.log(this.level,this.section);
+
+      //this.studentService.students = res as Student[];
+    });
+  }
+
 
 }

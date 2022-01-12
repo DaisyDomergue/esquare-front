@@ -13,6 +13,8 @@ import { StudentPortalComponent } from './student-portal/student-portal.componen
 import { PaymentComponent } from './payment/payment.component';
 import { TeacherRegisterComponent } from './teacher-register/teacher-register.component';
 import { TeacherComponent } from './teacher/teacher.component';
+import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { RegisterAdminComponent } from './register-admin/register-admin.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { TeacherComponent } from './teacher/teacher.component';
     StudentPortalComponent,
     PaymentComponent,
     TeacherRegisterComponent,
-    TeacherComponent
+    TeacherComponent,
+    TeacherListComponent,
+    RegisterAdminComponent
   ],
   imports: [
     BrowserModule,
