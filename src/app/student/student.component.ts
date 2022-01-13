@@ -33,7 +33,7 @@ export class StudentComponent implements OnInit {
     }
    }
   
-  levels = [{key:"pre_1",value:"Preschool - I"},{key:"pre_2",value:"Preschool - II"},{key:"pre_3",value:"Preschool - III"},{key:"spe_1",value:"Special Education Level - I"},{key:"spe_2",value:"Special Education Level - II"},{key:"care_basic",value:"Caregivers Training Basic"},{key:"care_adv",value:"Caregivers Training Advanced"}];
+  levels = [{key:"pre_1",value:"Preschool - I"},{key:"pre_2",value:"Preschool - II"},{key:"pre_3",value:"Preschool - III"},{key:"spe_1",value:"Special Education Level - I"},{key:"spe_2",value:"Special Education Level - II"},{key:"accelerated",value:"Accelerated Program"},{key:"care_basic",value:"Caregivers Training Basic"},{key:"care_adv",value:"Caregivers Training Advanced"}];
   
   ngOnInit(): void {
   }

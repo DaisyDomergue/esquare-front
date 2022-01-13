@@ -18,7 +18,7 @@ export class PaymentComponent implements OnInit {
     //console.log(data);
     const headers = { 'content-type': 'application/json' };
     this.http
-      .get('http://localhost:3000/payment/createorder', { headers: headers })
+      .get('http://192.168.202.50:3000/payment/createorder', { headers: headers })
       .subscribe((res) => {
         console.log(res['id']);
        this.payWithRazor(res['id']);

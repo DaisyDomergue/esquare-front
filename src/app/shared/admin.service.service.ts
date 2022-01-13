@@ -10,8 +10,8 @@ export class AdminService {
   selectedAdmin: Admin;
   admins:Admin[];
 
-  //readonly baseURL='http://127.0.0.1:3000/teacher/';
-  readonly registerURL='http://127.0.0.1:3000/register/admin';
+  //readonly baseURL='http://192.168.202.50:3000/teacher/';
+  readonly registerURL='http://192.168.202.50:3000/register/admin';
 
   constructor(private http:HttpClient) { }
 
