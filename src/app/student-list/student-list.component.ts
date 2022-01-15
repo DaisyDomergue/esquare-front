@@ -46,6 +46,6 @@ export class StudentListComponent implements OnInit {
   }
   editStudent(id:String)
   {
-    console.log(id);
+    alert("Work in progress");
   }
 }

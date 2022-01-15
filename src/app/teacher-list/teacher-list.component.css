@@ -1,0 +1,6 @@
+select {
+    display: inline-block;
+}
+.mouse-hover{
+    cursor: pointer;
+}

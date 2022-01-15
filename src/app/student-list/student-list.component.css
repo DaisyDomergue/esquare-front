@@ -1,3 +1,6 @@
 .mouse-hover{
     cursor: pointer;
 }
+select {
+    display: inline-block;
+}
