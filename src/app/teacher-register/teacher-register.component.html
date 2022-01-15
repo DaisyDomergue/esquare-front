@@ -40,6 +40,12 @@
                                 <label class="teal-text darken-2" >Email:</label>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input required type="text" #national_id_no="ngModel" [(ngModel)]="teacherService.selectedTeacher.national_id_no" name="national_id_no">
+                                <label class="teal-text darken-2" >ID no:</label>
+                            </div>
+                        </div>
                         
                     </div>
                     <div class="col s1"></div>

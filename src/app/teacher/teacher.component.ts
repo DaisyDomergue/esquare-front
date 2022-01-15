@@ -11,12 +11,13 @@ export class TeacherComponent implements OnInit {
   constructor(public teacherService:TeacherService) { }
 
   ngOnInit(): void {
+    this.getTeacher();
   }
   first_name="";
   last_name="";
   level="";
   section="";
-  getStudent()
+  getTeacher()
   {
     this.teacherService.getTeacher().subscribe((res) => {
       //console.log(res);
