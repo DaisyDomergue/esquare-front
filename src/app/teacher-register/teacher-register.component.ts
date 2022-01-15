@@ -29,7 +29,8 @@ export class TeacherRegisterComponent implements OnInit {
             }
           }
 
-  levels = [{key:"level_1",value:"Level 1"},{key:"level_2",value:"Level 2"},{key:"level_3",value:"Level 3"}];
+          levels = [{key:"pre_1",value:"Preschool - I"},{key:"pre_2",value:"Preschool - II"},{key:"pre_3",value:"Preschool - III"},{key:"spe_1",value:"Special Education Level - I"},{key:"spe_2",value:"Special Education Level - II"},{key:"accelerated",value:"Accelerated Program"},{key:"care_basic",value:"Caregivers Training Basic"},{key:"care_adv",value:"Caregivers Training Advanced"}];
+
   
 
   ngOnInit(): void {
