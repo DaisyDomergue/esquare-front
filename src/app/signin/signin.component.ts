@@ -40,8 +40,7 @@ export class SigninComponent implements OnInit {
       });
       const headers = { 'content-type': 'application/json' };
       this.http
-        .post('http://127.0.0.1:3000/login', body, { headers: headers })
-        .pipe(res => res,err=>{ alert("You are not authorized"); return err})
+        .post('http://192.168.202.55:3000/login', body, { headers: headers })
         .subscribe((res) => {
           console.log(res['status'],"message")
           if(res['message']=='Invalid username or password')
