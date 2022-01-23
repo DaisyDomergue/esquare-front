@@ -26,9 +26,19 @@ export class RegisterAdminComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.adminService.postAdmin(form.value).subscribe((res) => {
-      console.log(res);
-      M.toast({html:'Registered successfuly.', classes:'rounded'});
-      this.router.navigate(['sign-in']);
+      if(res['error'].err){
+        M.toast({html:'User name already exists.', classes:'rounded'});
+      }
+      else if (res['success']){
+        M.toast({html:'Registered successfuly.', classes:'rounded'});
+        this.router.navigate(['sign-in']);
+
+      }
+      else{
+        M.toast({html:'Error during registration.', classes:'rounded'});
+        
+      }
+    
     });
   }
 }
