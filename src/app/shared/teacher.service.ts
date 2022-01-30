@@ -10,10 +10,10 @@ export class TeacherService {
   selectedTeacher: Teacher;
   teachers:Teacher[];
 
-  readonly baseURL='http://0.0.0.0:3000/teacher/';
-  readonly registerURL='http://0.0.0.0:3000/register/teacher';
+  readonly baseURL='http://esquare-node_app_1:3000/teacher/';
+  readonly registerURL='http://esquare-node_app_1:3000/register/teacher';
 
-  constructor(private 'http:HttpClient) { }
+  constructor(private http:HttpClient) { }
 
   postTeacher(std : Teacher){
     return this.http.post(this.registerURL,std);

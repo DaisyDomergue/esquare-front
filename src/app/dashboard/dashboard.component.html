@@ -8,7 +8,7 @@
         <li *ngIf="type=='admin'"><a href="/teachers">Teacher List</a></li>
         <li *ngIf='type=="student"'><a href="/student-portal">My Class</a></li>
         <li *ngIf='type!="student"'><a href="/register-teacher">Become a Teacher</a></li>
-        <li><a href="https://192.168.202.82">About</a></li>
+        <li><a href="http://192.168.202.82">About</a></li>
         <li *ngIf='type=="student"'><a routerLink="payment">Payment Info</a></li>
         <li><a (click)="logout()">Logout</a></li>
       </ul>

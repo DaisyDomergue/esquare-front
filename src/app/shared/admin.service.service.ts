@@ -10,10 +10,10 @@ export class AdminService {
   selectedAdmin: Admin;
   admins:Admin[];
 
-  //readonly baseURL='http://0.0.0.0:3000/teacher/';
-  readonly registerURL='http://0.0.0.0:3000/register/admin';
+  //readonly baseURL='http://portal.esquare-homeschooling.com:3000/teacher/';
+  readonly registerURL='http://esquare-node_app_1:3000/register/admin';
 
-  constructor(private 'http:HttpClient) { }
+  constructor(private http:HttpClient) { }
 
   postAdmin(std : Admin){
     return this.http.post(this.registerURL,std);
