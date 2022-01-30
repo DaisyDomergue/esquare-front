@@ -35,20 +35,20 @@
             >
           </td>
           <td>
-              <div class="input-field">
-            <select
-            class="select2"
-              (change)="handleSectionChange($event, std._id)"
-              name="section"
-              [value]="std.section"
-            >
-              <option [value]="null">Select Section</option>
-              <option value="Section 1">Section 1</option>
-              <option value="Section 2">Section 2</option>
-              <option value="Section 3">Section 3</option>
-              <option value="Section 4">Section 4</option>
-            </select>
-        </div>
+            <div class="input-field">
+              <select
+                class="select2"
+                (change)="handleSectionChange($event, std._id)"
+                name="section"
+                [value]="std.section"
+              >
+                <option [value]="null">Select Section</option>
+                <option value="Section 1">Section 1</option>
+                <option value="Section 2">Section 2</option>
+                <option value="Section 3">Section 3</option>
+                <option value="Section 4">Section 4</option>
+              </select>
+            </div>
           </td>
         </tr>
       </thead>

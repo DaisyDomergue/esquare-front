@@ -26,7 +26,7 @@ export class RegisterAdminComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.adminService.postAdmin(form.value).subscribe((res) => {
-      if(res['error'].err){
+      if(!res['success']){
         M.toast({html:'User name already exists.', classes:'rounded'});
       }
       else if (res['success']){

@@ -40,7 +40,7 @@ export class SigninComponent implements OnInit {
       });
       const headers = { 'content-type': 'application/json' };
       this.http
-        .post('http://192.168.202.55:3000/login', body, { headers: headers })
+        .post('http://127.0.0.1:3000/login', body, { headers: headers })
         .subscribe((res) => {
           console.log(res['status'],"message")
           if(res['message']=='Invalid username or password')
@@ -49,6 +49,7 @@ export class SigninComponent implements OnInit {
           }
          
           else if ((res['type'] == 'student')) {
+            localStorage.setItem('token',res['data']);
             localStorage.setItem('type', res['type']);
             this.studentService.storeStudent(this.user_name);
             this.router.navigate(['student-portal']);
@@ -56,12 +57,14 @@ export class SigninComponent implements OnInit {
           }
           else if((res['type']== 'teacher'))
           {
+            localStorage.setItem('token',res['data']);
             localStorage.setItem('type', res['type']);
             this.teacherService.storeTeacher(this.user_name);
             this.router.navigate(['teacher-portal']);
           }
           else if((res['type']== 'admin'))
           {
+            localStorage.setItem('token',res['data']);
             localStorage.setItem('type', res['type']);
             this.adminService.storeAdmin(this.user_name);
             this.router.navigate(['students']);

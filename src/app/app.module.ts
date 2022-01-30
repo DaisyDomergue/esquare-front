@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { TeacherRegisterComponent } from './teacher-register/teacher-register.co
 import { TeacherComponent } from './teacher/teacher.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
+import {AuthInterceptor } from './Interceptor'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

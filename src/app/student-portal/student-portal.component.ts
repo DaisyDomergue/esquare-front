@@ -23,7 +23,8 @@ export class StudentPortalComponent implements OnInit {
       .pipe(
         (res) => res,
         (err) => {
-          alert('You are not authorized');
+          console.log("eerr",err);
+         // alert('You are not authorized');
           return err;
         }
       )
