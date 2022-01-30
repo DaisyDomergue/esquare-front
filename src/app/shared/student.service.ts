@@ -12,8 +12,8 @@ import { Student } from './student.model';
 export class StudentService {
     selectedStudent:Student;
     students:Student[];
-    readonly baseURL ='http://node_app:3000/student/';
-    readonly registerURL='http://node_app:3000/register/student';
+    readonly baseURL ='node_app:3000/student/';
+    readonly registerURL='node_app:3000/register/student';
 
   constructor(private http : HttpClient) 
   { }

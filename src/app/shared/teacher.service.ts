@@ -10,8 +10,8 @@ export class TeacherService {
   selectedTeacher: Teacher;
   teachers:Teacher[];
 
-  readonly baseURL='http://node_app:3000/teacher/';
-  readonly registerURL='http://node_app:3000/register/teacher';
+  readonly baseURL='node_app:3000/teacher/';
+  readonly registerURL='node_app:3000/register/teacher';
 
   constructor(private http:HttpClient) { }
 
