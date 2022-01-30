@@ -10,8 +10,8 @@ export class TeacherService {
   selectedTeacher: Teacher;
   teachers:Teacher[];
 
-  readonly baseURL='http://127.0.0.1:3000/teacher/';
-  readonly registerURL='http://127.0.0.1:3000/register/teacher';
+  readonly baseURL='http://192.168.202.55:3000/teacher/';
+  readonly registerURL='http://192.168.202.55:3000/register/teacher';
 
   constructor(private http:HttpClient) { }
 
