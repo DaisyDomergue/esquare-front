@@ -12,8 +12,8 @@ import { Student } from './student.model';
 export class StudentService {
     selectedStudent:Student;
     students:Student[];
-    readonly baseURL ='http://esquare-node_app_1:3000/student/';
-    readonly registerURL='http://esquare-node_app_1:3000/register/student';
+    readonly baseURL ='esquare-node_app_1:3000/student/';
+    readonly registerURL='esquare-node_app_1:3000/register/student';
 
   constructor(private http : HttpClient) 
   { }

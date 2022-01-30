@@ -18,7 +18,7 @@ export class PaymentComponent implements OnInit {
     //console.log(data);
     const headers = { 'content-type': 'application/json' };
     this.http
-      .get('http://esquare-node_app_1:3000/payment/createorder', { headers: headers })
+      .get('esquare-node_app_1:3000/payment/createorder', { headers: headers })
       .subscribe((res) => {
         console.log(res['id']);
        this.payWithRazor(res['id']);
