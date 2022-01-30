@@ -40,7 +40,7 @@ export class SigninComponent implements OnInit {
       });
       const headers = { 'content-type': 'application/json' };
       this.http
-        .post('https://portal.esquare-homeschooling.com:3000/login', body, { headers: headers })
+        .post(http://0.0.0.0:3000/login', body, { headers: headers })
         .subscribe((res) => {
           console.log(res['status'],"message")
           if(res['message']=='Invalid username or password')
