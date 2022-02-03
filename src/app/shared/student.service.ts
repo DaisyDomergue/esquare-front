@@ -12,8 +12,10 @@ import { Student } from './student.model';
 export class StudentService {
     selectedStudent:Student;
     students:Student[];
+
     readonly baseURL ='https://portal.esquare-homeschooling.com:3443/student/';
     readonly registerURL='https://portal.esquare-homeschooling.com:3443/register/student';
+
 
   constructor(private http : HttpClient) 
   { }

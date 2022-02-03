@@ -10,8 +10,10 @@ export class TeacherService {
   selectedTeacher: Teacher;
   teachers:Teacher[];
 
+
   readonly baseURL='https://portal.esquare-homeschooling.com:3443/teacher/';
   readonly registerURL='https://portal.esquare-homeschooling.com:3443/register/teacher';
+
 
   constructor(private http:HttpClient) { }
 
