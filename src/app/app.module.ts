@@ -15,7 +15,8 @@ import { TeacherRegisterComponent } from './teacher-register/teacher-register.co
 import { TeacherComponent } from './teacher/teacher.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
-import {AuthInterceptor } from './Interceptor'
+import {AuthInterceptor } from './Interceptor';
+import { MaterialsComponent } from './materials/materials.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {AuthInterceptor } from './Interceptor'
     TeacherRegisterComponent,
     TeacherComponent,
     TeacherListComponent,
-    RegisterAdminComponent
+    RegisterAdminComponent,
+    MaterialsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+.folder-list{
+    display: inline;
+    margin-left: 90px;
+    border:2px solid #fdfdfd;
+    font-size: 20px;
+    cursor: pointer;
+}
+.file-list{
+    width: 100%;
+    background-color: #f2f2f2;
+    border: 1px solid #d1d1d1;
+    padding:20px;
+}
+li{
+    list-style: none;
+}
+.files{
+    padding: 10px;
+}

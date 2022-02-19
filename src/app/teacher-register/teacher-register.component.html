@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input required type="text" #national_id_no="ngModel" [(ngModel)]="teacherService.selectedTeacher.national_id_no" name="national_id_no">
-                                <label class="teal-text darken-2" >ID no:</label>
+                                <label class="teal-text darken-2" >Adhar No:</label>
                             </div>
                         </div>
                         
@@ -56,6 +56,14 @@
                                 <label class="teal-text darken-2">Phone No:</label>
                             </div>
                         </div>
+                        <div class="row">
+                            
+                            <div class="input-field col s12">
+                                <label style="margin:20px;position: relative;top:0px;left:-20px;" class="teal-text darken-2">CV</label>
+                        <input type="file"  class="file-upload" #cv="ngModel" name="cv" [(ngModel)]="teacherService.selectedTeacher.cv" (change)="selectFile($event)">
+                        
+                    </div>
+                </div>
                      
                        
                         <div class="row">

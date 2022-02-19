@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input required type="text" #parent_email="ngModel" [(ngModel)]="studentService.selectedStudent.parent_email" name="parent_email">
-                                <label class="teal-text darken-2" >Parent email:</label>
+                                <label class="teal-text darken-2" >Email:</label>
                             </div>
                         </div>
                         
@@ -58,7 +58,7 @@
                         <div class="row" *ngIf="this.studentService.selectedStudent.level != 'care_basic' && this.studentService.selectedStudent.level != 'care_adv' ">
                             <div class="input-field col s12">
                                 <input required type="text" name="parent_id_no"  #parent_id_no="ngModel" [(ngModel)]="studentService.selectedStudent.parent_id_no"  >
-                                <label class="teal-text darken-2">Parent ID no :</label>
+                                <label class="teal-text darken-2">Adhar No :</label>
                             </div>
                         </div>
                         <div class="row" *ngIf="this.studentService.selectedStudent.level != 'care_basic' && this.studentService.selectedStudent.level != 'care_adv' ">
