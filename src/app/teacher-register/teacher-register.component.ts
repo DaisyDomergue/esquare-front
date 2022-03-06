@@ -26,7 +26,7 @@ export class TeacherRegisterComponent implements OnInit {
               user_name:"",
               user_password:"",
               section:"",
-              cv:null
+              // cv:null
             }
           }
 
