@@ -21,27 +21,20 @@
           <td>{{ std.level }}</td>
           <td>{{ std.parent_name }}</td>
           <td>
-            <a class="mouse-hover" (click)="deleteStudent(std._id)"
-              ><span class="material-icons material-icons-outlined">
+            <a class="mouse-hover" (click)="deleteStudent(std._id)"><span
+                class="material-icons material-icons-outlined">
                 delete
-              </span></a
-            >
+              </span></a>
           </td>
           <td>
-            <a class="mouse-hover" (click)="editStudent(std._id)"
-              ><span class="material-icons material-icons-outlined">
+            <a class="mouse-hover" (click)="editStudent(std._id)"><span class="material-icons material-icons-outlined">
                 edit
-              </span></a
-            >
+              </span></a>
           </td>
           <td>
             <div class="input-field">
-              <select
-                class="select2"
-                (change)="handleSectionChange($event, std._id)"
-                name="section"
-                [value]="std.section"
-              >
+              <select class="select2" (change)="handleSectionChange($event, std._id)" name="section"
+                [value]="std.section">
                 <option [value]="null">Select Section</option>
                 <option value="Section 1">Section 1</option>
                 <option value="Section 2">Section 2</option>
