@@ -13,13 +13,16 @@ export class StudentService {
     selectedStudent:Student;
     students:Student[];
 
+
     readonly baseURL ='https://portal.esquare-homeschooling.com:3443/student/';
     readonly registerURL='https://portal.esquare-homeschooling.com:3443/register/student';
 
 
   constructor(private http : HttpClient) 
   { }
-
+  getMaterials(){
+    return this.http.get('http://127.0.0.1:3000/files/studymaterials/' + JSON.parse(localStorage.getItem('student_level')));
+  }
   postStudent(std : Student){
     return this.http.post(this.registerURL,std);
   }
@@ -40,5 +43,6 @@ export class StudentService {
   storeStudent(currentStudent:String)
   {
     localStorage.setItem("student",JSON.stringify(currentStudent));
+    
   }
 }

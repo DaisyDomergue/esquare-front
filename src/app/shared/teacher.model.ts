@@ -9,4 +9,5 @@ export class Teacher {
     user_name:String;
     user_password:String;
     section:String;
+    // cv:any;
 }

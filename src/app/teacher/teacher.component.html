@@ -3,9 +3,7 @@
   <div class="offset-s2 col s8">
     <div *ngIf="section.length != 0; else NoSection">
       <a
-        href="https://portal.esquare-homeschooling.com:8443/{{ level }}{{
-          section
-        }}"
+        href="{{classJoinLink}}"
       >
         <div class="card">
           <div class="card-image">

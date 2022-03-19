@@ -19,7 +19,6 @@ export class PaymentComponent implements OnInit {
     const headers = { 'content-type': 'application/json' };
     this.http
       .get('https://portal.esquare-homeschooling.com:3443/payment/createorder', { headers: headers })
-
       .subscribe((res) => {
         console.log(res['id']);
        this.payWithRazor(res['id']);

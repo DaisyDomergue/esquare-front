@@ -25,7 +25,8 @@ export class TeacherRegisterComponent implements OnInit {
               phone_no:"",
               user_name:"",
               user_password:"",
-              section:""
+              section:"",
+              // cv:null
             }
           }
 
@@ -35,9 +36,18 @@ export class TeacherRegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  selectFile(event):void {
+    console.log(event.target.files[0]);
+  //   if(event.target.files.length > 0){
+  //     const filename=event.target.files[0];
+  //  this.teacherService.selectedTeacher.cv.push(filename.name);
+  //     console.log(filename.name);
+  //   }
+  }
   
 
   onSubmit(form:NgForm){
+    console.log(form.value);
     this.teacherService.postTeacher(form.value).subscribe((res)=>
     {
       if(res['status']=='success')
@@ -52,6 +62,6 @@ export class TeacherRegisterComponent implements OnInit {
      // console.log(res);
      
     });
-  }
+   }
 
 }

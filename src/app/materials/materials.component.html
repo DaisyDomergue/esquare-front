@@ -1,0 +1,12 @@
+<div class="row">
+    <h3 style="text-align: center;">Study Materials</h3>
+  <div class="offset-s1 col s8 ">
+      <li class="folder-list" *ngFor="let folder of folders"><a (click)="Files(parentfolder,folder)">{{folder}}</a></li>
+  </div>
+ 
+</div>
+<div class="row ">
+    <div *ngIf="file_list" class="file-list offset-s1 col s8">
+        <li class="files" *ngFor="let file of file_list"><a>{{file}}</a></li>
+    </div>
+</div>

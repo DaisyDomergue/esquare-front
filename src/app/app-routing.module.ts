@@ -11,6 +11,7 @@ import { StudentGuard } from './guards/student.guard';
 import { TeacherComponent } from './teacher/teacher.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
+import { MaterialsComponent } from './materials/materials.component';
 const routes: Routes = [
   {
     path:'',component:SigninComponent
@@ -44,6 +45,9 @@ const routes: Routes = [
   },
   {
     path:'register-admin',component:RegisterAdminComponent
+  },
+  {
+    path:'study-material',component:MaterialsComponent
   }
 ];
 
