@@ -10,8 +10,10 @@ export class AdminService {
   selectedAdmin: Admin;
   admins:Admin[];
 
-  //readonly baseURL='http://portal.esquare-homeschooling.com:3000/teacher/';
-  readonly registerURL='http://127.0.0.1:3000/register/admin';
+
+
+  readonly registerURL='https://portal.esquare-homeschooling.com:3443/register/admin';
+
 
   constructor(private http:HttpClient) { }
 
