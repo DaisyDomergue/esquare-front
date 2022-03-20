@@ -35,7 +35,7 @@ export class StudentPortalComponent implements OnInit {
         this.last_name = res['last_name'];
         this.level = res['level'];
         this.section = res['section'];
-        this.classLink = res['classLink']
+        this.classLink = res['clasLink']
         localStorage.setItem("classLink", JSON.stringify(this.classLink));
 
         localStorage.setItem("student_level", JSON.stringify(this.level));
