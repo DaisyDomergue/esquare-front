@@ -18,7 +18,7 @@ export class MaterialsComponent implements OnInit {
     });
   }
   async Files(parent:string,folder:string){
-    window.fetch('http://127.0.0.1:3000/files/listfiles/'+parent+'&' +folder, {
+    window.fetch('http://192.168.202.55:3000/files/listfiles/'+parent+'&' +folder, {
    
       method: 'GET',
       headers: {
