@@ -71,7 +71,8 @@ export class SigninComponent implements OnInit {
             this.adminService.storeAdmin(this.user_name);
             this.router.navigate(['students']);
           }else{
-            M.toast({html:'Error.', classes:'rounded'});
+            M.toast({html:'Error.'+res['message'], classes:'rounded'});
+          }
         });
     } catch (err) {
       console.log(err);
