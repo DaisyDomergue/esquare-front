@@ -7,6 +7,8 @@ import { TeacherService } from '../shared/teacher.service';
 import { Admin } from '../shared/admin.model';
 import { AdminService } from '../shared/admin.service.service';
 
+declare var M:any;
+
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -68,7 +70,8 @@ export class SigninComponent implements OnInit {
             localStorage.setItem('type', res['type']);
             this.adminService.storeAdmin(this.user_name);
             this.router.navigate(['students']);
-          }
+          }else{
+            M.toast({html:'Error.'+res['messeage'], classes:'rounded'});
         });
     } catch (err) {
       console.log(err);
