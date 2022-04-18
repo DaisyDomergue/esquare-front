@@ -54,6 +54,9 @@ export class StudentComponent implements OnInit {
       if(res['message']=="Student Created Successfully")
       {
         M.toast({html:'Registered successfuly.', classes:'rounded'});
+        localStorage.setItem('id',res['_id']);
+        localStorage.setItem('level', res['level']);
+        console.log("this are saved",localStorage.getItem("id"),localStorage.getItem("level"));
         this.router.navigate(['payment']);
       }
       else{

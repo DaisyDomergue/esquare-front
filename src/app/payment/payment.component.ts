@@ -14,11 +14,12 @@ export class PaymentComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // return this.http.get(this.baseURL+"profile/" + JSON.parse(localStorage.getItem("student")));
   createRzpayOrder() {
     //console.log(data);
     const headers = { 'content-type': 'application/json' };
     this.http
-      .get('http://192.168.202.55:3000/payment/createorder', { headers: headers })
+      .get('http://192.168.202.55:3000/payment/createorder/'+ localStorage.getItem("id"), { headers: headers })
       .subscribe((res) => {
         console.log(res['id']);
        this.payWithRazor(res['id']);
@@ -30,11 +31,9 @@ export class PaymentComponent implements OnInit {
   payWithRazor(val) {
     const options: any = {
       key: 'rzp_test_H63Iwu9sdwkPrq',
-      amount: 20000, // amount should be in paise format to display Rs 1255 without decimal point
-      currency: 'INR',
       name: 'ESQUARE', // company name or product name
       description: '',  // product description
-      image: './assets/logo.png', // company logo or product image
+      image: './assets/images/AdvancePayment.jpg', // company logo or product image
       order_id: val, // order_id created by you in backend
       modal: {
         // We should prevent closing of the form when esc key is pressed.
