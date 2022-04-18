@@ -33,8 +33,8 @@ export class StudentComponent implements OnInit {
     }
    }
   
-  levels = [{key:"pre_1",value:"Preschool - I"},{key:"pre_2",value:"Preschool - II"},{key:"pre_3",value:"Preschool - III"},{key:"spe_1",value:"Special Education Level - I"},{key:"spe_2",value:"Special Education Level - II"},{key:"accelerated",value:"Accelerated Program"},{key:"care_basic",value:"Caregivers Training Basic"},{key:"care_adv",value:"Caregivers Training Advanced"}];
-  
+  // levels = [{key:"pre_1",value:"Preschool - I"},{key:"pre_2",value:"Preschool - II"},{key:"pre_3",value:"Preschool - III"},{key:"spe_1",value:"Special Education Level - I"},{key:"spe_2",value:"Special Education Level - II"},{key:"accelerated",value:"Accelerated Program"},{key:"care_basic",value:"Caregivers Training Basic"},{key:"care_adv",value:"Caregivers Training Advanced"}];
+  levels = [{key:"pre_1",value:"Preschool - I"},{key:"pre_2",value:"Preschool - II"},{key:"pre_3",value:"Preschool - III"},{key:"Grade_1",value:"Grade - I"},{key:"Grade_2",value:"Grade - II"},{key:"spe_1",value:"Special Education Level - I"},{key:"spe_2",value:"Special Education Level - II"},{key:"Holistic_G1",value:"Holistic Program Group - I"},{key:"Holistic_G2",value:"Holistic Program Group - II"},{key:"accelerated_G1",value:"Accelerated Program Group - I"},{key:"accelerated_G2",value:"Accelerated Program Group - II"},{key:"accelerated_G3",value:"Accelerated Program Group - III"},{key:"accelerated_G4",value:"Accelerated Program Group - IV"},{key:"caregivers_basic",value:"Caregivers Training Basic"},{key:"caregivers_adv",value:"Caregivers Training Advanced"}];
   ngOnInit(): void {
   }
   firstnameChange(event:any)
