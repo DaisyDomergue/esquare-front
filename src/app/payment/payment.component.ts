@@ -19,7 +19,7 @@ export class PaymentComponent implements OnInit {
     //console.log(data);
     const headers = { 'content-type': 'application/json' };
     this.http
-      .get('http://192.168.202.55:3000/payment/createorder/'+ localStorage.getItem("id"), { headers: headers })
+      .get('http://portal.esquare-homeschooling.com/payment/createorder/'+ localStorage.getItem("id"), { headers: headers })
       .subscribe((res) => {
         console.log(res['id']);
        this.payWithRazor(res['id']);
