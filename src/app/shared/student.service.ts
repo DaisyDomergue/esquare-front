@@ -12,13 +12,13 @@ import { Student } from './student.model';
 export class StudentService {
     selectedStudent:Student;
     students:Student[];
-    readonly baseURL ='http://portal.esquare-homeschooling.com/student/';
-    readonly registerURL='http://portal.esquare-homeschooling.com/register/student';
+    readonly baseURL ='http://portal.esquare-homeschooling.com:3443/student/';
+    readonly registerURL='http://portal.esquare-homeschooling.com:3443/register/student';
 
   constructor(private http : HttpClient) 
   { }
   getMaterials(){
-    return this.http.get('http://portal.esquare-homeschooling.com/files/studymaterials/' + JSON.parse(localStorage.getItem('student_level')));
+    return this.http.get('http://portal.esquare-homeschooling.com:3443/files/studymaterials/' + JSON.parse(localStorage.getItem('student_level')));
   }
   postStudent(std : Student){
     return this.http.post(this.registerURL,std);

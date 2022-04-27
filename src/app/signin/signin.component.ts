@@ -41,7 +41,7 @@ export class SigninComponent implements OnInit {
       });
       const headers = { 'content-type': 'application/json' };
       this.http
-      .post('http://portal.esquare-homeschooling.com/login', body, { headers: headers })
+      .post('http://portal.esquare-homeschooling.com:3443/login', body, { headers: headers })
       .subscribe((res) => {
           console.log("submitting");
           console.log(res['status'],"message")
@@ -76,7 +76,7 @@ export class SigninComponent implements OnInit {
       console.log(err);
     }
 
-    // const result= await fetch('portal.esquare-homeschooling.com')
+    // const result= await fetch('portal.esquare-homeschooling.com:3443')
 
     //this.router.navigate(['payment']);
   }
