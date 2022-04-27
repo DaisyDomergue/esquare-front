@@ -18,7 +18,7 @@ export class MaterialsComponent implements OnInit {
     });
   }
   async Files(parent:string,folder:string){
-    window.fetch('http://portal.esquare-homeschooling.com:3443/files/listfiles/'+parent+'&' +folder, {
+    window.fetch('https://portal.esquare-homeschooling.com:3443/files/listfiles/'+parent+'&' +folder, {
    
       method: 'GET',
       headers: {

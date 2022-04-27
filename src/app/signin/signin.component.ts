@@ -41,7 +41,7 @@ export class SigninComponent implements OnInit {
       });
       const headers = { 'content-type': 'application/json' };
       this.http
-      .post('http://portal.esquare-homeschooling.com:3443/login', body, { headers: headers })
+      .post('https://portal.esquare-homeschooling.com:3443/login', body, { headers: headers })
       .subscribe((res) => {
           console.log("submitting");
           console.log(res['status'],"message")
